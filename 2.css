@@ -1,0 +1,50 @@
+
+
+#Munkadíjkalkulátor{width: 100%;}   
+
+.fejléc{
+    display: flex;                  /*  Ok: sorokba tudjam rendezni a benne lévő div-eket*/
+    flex-direction: row;
+    width: 100%;                    /*  kitöltse teljes szélességébe a képernyőt*/
+    font-weight: bold;
+    background-color: antiquewhite;
+    height: 40px;
+    align-items: center;}           /*  A diven belöl föggőlegesen középen legyen (színezés közeépn) */
+
+
+#EgyébMunkák{           
+    width: 60%; }                   /*  3 részre van tagolva a sor, az Egyébmunkák 60% szélességet foglalnak el*/
+
+#Mennyiségm2{
+    width: 10%;}                    /*  3 részre van tagolva a sor, a Mennyiségm2 10% szélességet foglal el*/
+
+#MunkaÁra{ 
+    width: 26%;                     /*  3 részre van tagolva a sor, a labelek 20% szélességet foglalnak el így szerintem jobban hasonlíta videós példához*/
+text-align: center;}
+
+.sorok{display: flex;               /* Ok: az elemeket sorokba rendezhessem */
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    align-items: center;            /*  A diven belöl föggőlegesen középen legyen (színezés közeépen) */
+    border-bottom: 1px solid;       /*  sorok közti választó vonal (border)*/
+    }
+
+label{
+    width: 60%;}                    /*  3 részre van tagolva a sor, a labelek 60% szélességet foglalnak el*/
+
+input{ 
+    height:80%;                     /*  az input ablak magaaságát a sorhoz képest 80% ra állítottam, azért hogy a színezés felülé és alul túlnyúljon rajta */ 
+    width: 10%;                     /*  3 részre van tagolva a sor, az inputok 10% szélességet foglalnak el*/
+
+     }
+
+span{
+    margin-left: 5px;}              /*  a span-ben lévő mértékegység rögtön az input alblakoz tapadna, ezért balra adtam neki eltartást */
+
+.eredmény{                          
+    width: 20%;                     /*  3 részre van tagolva a sor, az eredmények 20% szélességet foglalnak el*/                 
+    text-align:center;}             /*  középre rendeztem az eredmény div-eket*, hogy a Munkaára alatt legyen/
+
+
+

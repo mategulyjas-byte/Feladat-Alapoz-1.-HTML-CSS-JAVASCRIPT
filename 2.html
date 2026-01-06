@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valós_idejű_kalkulátor</title>
+    <link rel="stylesheet" href="2.css">
+
+</head>
+<body>
+     
+     <!-- Egy "nagy div alkotja a kalkulátor külső vázát, ebben helyezkednek el a részegységek" -->
+
+<div id="Munkadíjkalkulátor">
+
+    <!-- A következő div alkotja a fejlécet, egy felső indexet is kellett készteni, melyet inline 
+     módon késztettem el, jelen helyzetben ezt gondoltam a legpraktikusabbnak, mert csak egy helyen kellett -->
+
+    <div class="fejléc">
+        <div id="EgyébMunkák"> Egyéb munkák </div>
+        <div id="Mennyiségm2"> Mennyiség m<sup>2</sup></div>
+        <div id="MunkaÁra"> Munka ára </div>
+    </div>
+
+    <!--  A videóban látott és a feladatban meghatározttak szerint 7 db sort készítettem
+        mindegyik sor tartalmaz egy labelt, mely az for" illetve az id" segítségével össze van kötve az input-type-al, azért 
+        hogy ha a label-re kattintok, akkor az input mezőbe már lehessen is írni. Tartalmaz továbbá 
+        egy number típusú beviteli mezőt, illetve egy span-t ahová beírtam a mértékegységet, továbbá 
+        egy div-et, ahol az erdemények kerülnek megjelenítésre.
+        Az input mező további elemei: 
+            id="a" -egyedi azonostíás a label miatt,
+            class= mennyiség  mindegyik sorban ugyanaz a class, eza számolás során kell (egységesíteni a beviteli mezőket)
+            egységár="10"  midegyik inputnál más ez az érték számolás során kell (ez gyakorlatilag egy változó)
+            step="0.5" vagyis ha léptetem, akkor0,5 el emelkedjen az input adat
+            min="0.5" a legkisebb beírható egység az inputba  a fentebbi két sor változik 1-re, ha pl. db szám van megadva
+            titel-t is készettetem, tájékoztatás céljából az inputokhoz-->
+            
+                                    
+    <div class="sorok"> 
+        <label for="a">Polisztirol díszléc ragsztása (50 mm-ig)</label>
+        <input type="number" id="a"  class= "mennyiség" egységár="10" step="0.5", min="0.5" title="Add meg a mennyiséget méterben (0,5 m pontossággal)">
+        <span>fm</span>
+        <div id="a1"  class="eredmény"></div>
+    </div>
+
+    <div class="sorok">
+        <label for="b">Polisztirol díszléc ragsztása tetőtérben vagy tagolt felóleteken (50 mm-ig)</label>
+        <input type="number" id="b" class="mennyiség" egységár="20"  step="0.5" min="0.5" title="Add meg a mennyiséget méterben (0,5 m pontossággal)" > 
+        <span>fm</span>
+        <div id="b1" class="eredmény"></div>
+        </div>
+
+    <div class="sorok">
+        <label for="c">Polisztirol díszléc ragsztása (55 mm - 110 mm-ig)</label>
+        <input type="number" id="c" class="mennyiség" egységár="30" step="0.5", min="0.5" title="Add meg a mennyiséget méterben (0,5 m pontossággal)">
+        <span>fm</span>
+        <div id="c1"  class="eredmény"></div>
+    </div>
+
+    <div class="sorok">
+        <label for="d">Polisztirol díszléc ragsztása tetőtérben vagy tagolt felóleteken (55 mm - 110 mm-ig)</label>
+        <input type="number" id="d" class="mennyiség" egységár="40"step="0.5", min="0.5" title="Add meg a mennyiséget méterben (0,5 m pontossággal)">
+        <span>fm</span>
+        <div  id="d1" class="eredmény"></div>
+    </div>
+
+    <div class="sorok">
+        <label for="e">Polisztirol ragasztása (díszes 50 mm-ig)</label>
+        <input type="number" id="e" class="mennyiség" egységár="50" step="0.5", min="0.5" title="Add meg a mennyiséget méterben (0,5 m pontossággal)">
+        <span>fm</span>
+        <div id="e1"   class="eredmény"></div>
+    </div>
+
+    <div class="sorok">
+        <label for="f">Rozetták ragasztása, festése 40cm átmérőig</label>
+        <input type="number" id="f"class="mennyiség" egységár="60" step="1", min="1" title="Add meg a mennyiséget ( db pontossággal)">
+        <span>db</span>
+        <div id="f1"   class="eredmény"></div>
+    </div>
+
+    <div  class="sorok">
+        <label for="g">Rozetták ragasztása, festése 70 cm átmérőig</label>
+        <input type="number" id="g" class="mennyiség" egységár="70" step="1", min="1" title="Add meg a mennyiséget ( db pontossággal)" > 
+        <span>db</span>
+        <div id="g1"class="eredmény"></div>
+
+    </div>
+
+    
+</div>
+
+    <script src="2.js"></script>
+</body>
+</html>
