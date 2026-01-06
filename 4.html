@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuck Norris vicc lekérése</title>
+
+    <style>
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+body > div:first-of-type {display: flex;
+                          justify-content: center;
+                          margin-bottom: 20px; 
+                          }
+
+button{
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: 140%;
+        color: brown;
+        width:40%;
+        border: 0px;
+        background-color: white;
+        }
+
+#img1{ 
+      border-radius: 50%;
+      }
+
+#vicc{
+     border: 5px dotted greenyellow;
+     border-radius: 20px;
+     font-size: 150%;
+     font-weight: bold;
+    }
+
+ #img2{
+       width: 30%; 
+       border-radius: 50%;
+       }
+
+
+    </style>
+</head>
+<body>
+  
+    <div >
+        <button> Kattints a Chuck Norris gombra és Chuck Norris megmondja:)
+            <img id="img1" src="https://www.warrenchandler.com/wp-content/uploads/2013/09/web-programming-chuck.jpg" alt=" Billentyűzet (gomb)">
+        </button>
+     </div>
+
+    <div id="vicc"></div>
+
+    <img title="Carlos Ray „Chuck” Norris (született: 1940. március 10.) amerikai harcművész, színész, forgatókönyvíró és producer. A 2026-os évben a legenda 86. életévét tölti be" id="img2" src="https://memesgenerator.hu/wp-content/uploads/mememe/2022/09/chuck-norris-megmondta-50323-1.jpg" alt=" Chuck-Norris">
+
+    <script>
+
+        button=document.querySelector("button")      // gomb definiálás és megszólítása
+        div=document.querySelector("#vicc")          // azon div definiálás és megszólítása, amibe az API URL- ről érkező kíírások "viccek kerülnek megjelenítésre "
+
+        button.onclick=function(){                                     // onclick re, a következő function fut le
+            fetch('https://api.chucknorris.io/jokes/random')             // az APU URL-ről az adatok lekérése megtörténik
+                .then(function(JsonAdat){return JsonAdat.json()})           // a function csak akkor indul el, ha az össze adat letöltésre kerül/ beérkezett, utána a jason fromátumú adatokból JS által is olvasható formára alakítja
+                    .then(function(olvashatóformátum){div.innerText =olvashatóformátum.value})};  // miután átlakította, csak után aindul el a következő function, ami a már korábban definiált div innertextjében megjeleníti a már olvashatóformátumra alakított adat értékét vagyis magát a szöveget.
+
+
+
+    </script>
+</body>
+</html>
