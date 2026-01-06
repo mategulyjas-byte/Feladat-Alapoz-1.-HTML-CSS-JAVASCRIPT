@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox és média query</title>
+    <link rel="stylesheet" href="3.css">
+
+
+</head>
+<body>
+
+   <header>
+        <h1> Kertünk az otthonunk</h1>
+        <h2> Kertépítést, kertgondozás az Ön igényire szabva</h2>
+        <h2> Sopron és környéke  Tel:  (06) 70 555-5555</h2>
+   </header>
+
+   <nav>
+    <a href="">Kezdőlap</a>
+    <a href="#rólunk">Rólunk</a>
+    <a href="#kapcsolat">Kapcsolat</a>
+    <a href="#referenciák">Referenciák</a>
+    <a href="#videók">Videók munkáinkról</a>
+    <a href="#árlist">Árlista </a>
+    <a href="#gépparkunk">Gépparkunk</a>
+    <a href="#gyik">GYIK</a>
+   </nav>
+
+    <div>
+        <aside>
+             <h3> Mottónk</h3>
+             <p>Kertet nézni olyan, mint verset vagy novellát olvasni. Az ember mindegyik esetben valakinek az elgondolását nézi, azt, hogy milyen harmóniában találja meg a saját élvezetét és a szépséget. </p>
+             <p>Minden kert a természeti erőforrások tárháza! Van víz, amelyet az égből kapunk, van talaj, amely befogadja és táplálja a növényeket, van biomassza, amely folyamatosan termékenyen tartja a talajt, és ott vannak az állatok, illetve a mikroorganizmusok is, amelyek ugyancsak hozzáteszik a magukét az egészhez. Igaz, ezeknek nem mindegyike áll folyamatosan rendelkezésre, és nem is okvetlenül abban a mennyiségben, amit elsőre gondolnánk, pláne nem a klímaváltozás idején. A dolog szépsége ugyanakkor, hogy rajtunk múlik, mennyire életképes, egészséges és fenntartható rendszerré áll össze a kertünk.</p>
+             <iframe width="100%" height="auto" src="https://www.youtube.com/embed/XgRwXA8Fauw?si=JbXv-mEOwn18ncff&amp;playlist=XgRwXA8Fauw&loop=1&start=1&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+             <img width="100% height:auto " src="https://greenup.hu/wp-content/uploads/2025/04/Viragos-kert-tervezes-hazilag-768x537.webp" alt="">
+             <img width="100%" src="https://www.megyeriszabolcskerteszete.hu/custom/megyeri/image/cache/w0h0q80np1/ckeditor/Hamarosan%20itt%20a%20tavasz%20%E2%80%93%20el%C5%91%20a%20f%C5%B1ny%C3%ADr%C3%B3val%201.jpg" alt="">
+             <img width=100% src="data:image/png;base64,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" alt="">
+             <img width="100%" src="https://www.akridgeacehardware.com/wp-content/uploads/2015/04/husqvarna-logo.png" alt="">
+             <img width="100%" src="data:image/png;base64,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" alt="">
+             <iframe width="100%" height="auto" src="https://www.youtube.com/embed/jVtlUuQDQas?si=u2ts1SY05WTU2cEz&playlist=jVtlUuQDQas&loop=1&start=1&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        </aside>
+        <main>
+            <section>
+                 <h3 id="rólunk">Rólunk</h3>
+                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quaerat vitae corporis iure iste. Magnam, aliquam eveniet quidem porro nostrum aperiam explicabo! Ducimus praesentium, dicta ipsum consequatur adipisci ratione officia.
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veritatis molestias rem quae laudantium impedit praesentium fugiat, dolores sit animi neque quam temporibus voluptatem? Quo dolorum debitis blanditiis aspernatur illum.10
+                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                 Sapiente ex ea niquid delectus dolorem mollitia perferendis nam odit suscipit hic ducimus impedit esse natus cupiditate non labore et temporibus commodi corporis. Natus necessitatibus fugit mollitia.
+                 Quis saepe dolorum incidunt consectetur doloremque quia omnis, at corporis non illum amet, sint tenetur rem. Ut blanditiis magnam, cum reiciendis, earum provident aeligendi temporibus iusto explicabo incidunt?
+                 Suscipit dolorem et commodi </p> 
+                <div>
+                    <img  src="https://gardencentrum2.cdn.shoprenter.hu/custom/gardencentrum2/image/cache/w900h900wt1q100/kerttervezes/ultetes.webp?lastmod=0.1737540155" alt="">  
+                    <img src="https://dynamic.design.com/preview/logodraft/7a6d1fb6-4f34-4932-a874-ed000e01610d/image/large.png" alt="">
+                    <iframe width="" height="" src="https://www.youtube.com/embed/wKS0n1A9TlE?si=m9Mp_-K99_LVAckm&playlist=wKS0n1A9TlE&loop=1&start=1&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 </div>
+                 <p>Facilis nesciunt dolore, natus quibusdam modi maxime voluptates dolorem nostrum voluptate provident assumenda animi voluptatem vel laudantium, quos officia nisi iste, accusamus non sunt unde!
+                 Iure consequatur soluta, ullam ipsa vero in, odit vitae ut officiis numquam eveniet repellendus. Illo voluptate debitis, nostrum quis praesentium aspernatur eveniet placeat totam eius labore doloremque laborum facere incidunt!
+                 Tenetur delectus ve architecto eligendi ipsum, delectus debitis possimus amet cupiditate eveniet reprehenderit nobis non quos quis quasi. In inventore harum ullam facere est rerum doloremque quis? </p>
+            </section>
+
+            <section>
+                 <h3 id="kapcsolat">Kapcsolat</h3>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ex vero omnis atque asperiores itaque iure necessitatibus voluptatibus deserunt aliquam esse nostrum explicabo dolorem molestiae quas non eveniet, perferendis mollitia!
+                 Possimus unde quae, obcaecati, vel fuga dolores amet atque sequi similique, sunt odit consequatur totam sit dolorem? Esse amet temporibus suscipit quaerat praesentium! Corporis dicta fugiat eos incidunt, consectetur animi?
+                 Mollitia soluta illum, aliquam dolorum odio placeat odit sint tempore, eveniet possimus tempora voluptas optio atque quam accusamus natus magni voluptate. Quos, deleniti. Doloribus accusamus perferendis placeat aliquam facilis deleniti?
+                 Rerum sed, error quisquam aliquam enim consectetur velit, commodi non consequuntur voluptates similique beatae quam porro ad voluptatibus nulla odio tempora veniam? Ratione reiciendis voluptatem repellendus natus autem, ad temporibus. </p>
+            </section>
+
+            <section>
+                 <h3 id="referenciák">Referenciák</h3>
+                 <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex eum unde perspiciatis quia placeat, blanditiis eaque, dolor repellendus debitis quidem cupiditate neque quisquam facilis suscipit ipsam quod fugit mollitia voluptatibus.
+                 Nostrum mollitia quidem quisquam incidunt consequatur quae, aliquam et ipsam voluptatibus, possimus debitis atque laborum rerum autem quasi eligendi architecto rem eum corporis, cupiditate numquam laboriosam. Ipsam rerum beatae incidunt?
+                 Nam, vel quidem quos obcaecati culpa pariatur, error atque quasi officia voluptas debitis distinctio. Voluptatibus sed blanditiis repudiandae quibusdam. Iste atque itaque nesciunt maiores at perferendis reiciendis, commodi sint nihil.</p>
+            </section>
+
+
+            <section>
+                 <h3 id="videók"> Videók munkáinkról</h3>
+                 <a href="https://www.youtube.com/watch?v=WKxWZRg-XD4" target="_blank"> Elhagyatott kert újjáépítése </a>
+            </section>
+
+            <section>
+                 <h3 id="árlist"> Árlista</h3>
+                 <a href="https://images.maxapro.hu/classified-images/001/158/574/8813219/photo_funyiras-fukaszalas-bozotirtas_115265676.jpg" target="_blank"> Aktuális áraink itt találhatóak</a>
+                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sapiente voluptatibus neque animi, voluptatem illum aperiam alias quas qui in ipsam libero excepturi incidunt dolorem consectetur! Voluptatum est sit et!
+                 Odit ullam beatae quaerat cum, id, suscipit voluptatum in, nam impedit quo exercitationem temporibus atque ea labore delectus voluptates nobis! Quos similique blanditiis quidem delectus repellat dolorum, perferendis sed vero!
+                 Quod eaque quis nesciunt neque minima accusantium ipsum enim corrupti, alias blanditiis nihil! Consectetur sunt mollitia, reprehenderit sit quam sequi, soluta quo magni reiciendis provident nesciunt quisquam ipsum dignissimos blanditiis.</p>
+            </section>
+
+             <section>
+                 <h3 id="gépparkunk"> Gépparkunk</h3>
+                 <a href="https://galgakertigep.hu/wp-content/uploads/2020/10/HQ-LC353.jpg" target="_blank"> Fűnyíró</a>
+                 <br>
+                 <a href="https://www.kisgepweb.hu/wp-content/uploads/2020/12/stihl-sr-450-hati-motoros-permetezo.jpg" target="_blank"> Bezinmotors nagy hatékonyságú permetező</a>
+            </section>
+
+            <section>
+                 <h3 id="gyik">GYIK</h3>
+                 <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo modi praesentium tempore, qui sed delectus consectetur fugiat, accusamus, exercitationem facilis natus reprehenderit! Sapiente accusamus itaque tempora velit non rerum temporibus!
+                 Vel nam in unde sunt ab optio, repudiandae architecto illum asperiores eveniet porro voluptatem nesciunt modi debitis soluta libero animi, quibusdam distinctio vitae iste dolorem! Molestias veritatis modi soluta optio.
+                 Itaque, molestiae culpa vero quia animi repudiandae temporibus est quaerat exercitationem quasi!
+                 Molestias error autem veritatis magnam distinctio saepe placeat optio, provident, nihil deleniti officia harum? Aliquid molestiae quibusdam enim.
+                 Quaerat voluptatibus autem a? Dolor iusto repellat blanditiis sapiente, reiciendis fugiat adipisci at deserunt aperiam eveniet libero, eligendi voluptatem architecto praesentium sed ea similique deleniti. Optio tenetur nulla recusandae hic?
+                 Ad itaque repellendus ab, quae voluptatum autem sunt nobis odio! Quia nam magni, magnam omnis asperiores voluptatibus illum aliquam itaque, debitis voluptatum repudiandae praesentium id similique ab explicabo ipsam voluptate.
+                 Voluptatibus exercitationem nostrum culpa quasi eligendi veniam excepturi deleniti omnis ducimus! Incidunt ipsum quibusdam aperiam, aliquid praesentium, modi cupiditate laborum sapiente delectus officia dolores ullam itaque repellendus harum quia. Commodi! </p>
+        
+            </section>
+        </main>
+
+    </div>
+
+    <footer>
+        <p>Minden jog fentartva, másolni, sokszorosítani, az oldal minden elemét tilos!</p>
+    </footer>
+
+    <a href="">Ugrás az oldal tetejére</a>
+
+</body>
+</html>

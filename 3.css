@@ -1,0 +1,133 @@
+
+:root {
+        scroll-behavior: smooth;       /*  Lassan scrollozzon */
+      }  
+
+*{
+  box-sizing: border-box;         /*  inkább beállítottam,   méretezés miatt */      
+    }    
+
+html{
+    height: 100%;           /*  hozzá képest tudok majd % ot adni a többi elemnek is*/
+    }          
+
+body{
+    height: 100%;
+    background-image:url(https://dynamic.design.com/preview/logodraft/fbb20b46-30c9-4139-9667-ba290ac5e377/image/large.png) ;
+    background-repeat: no-repeat;           
+    background-attachment: fixed;
+    background-size: cover;                 
+    background-position-x:125px;            /*  háttrékp beállítása (véleményem szerint  nagy felbontásho ez optimálisa, kis felbontásnál változtatok rajta*/
+    background-position-y: center;
+    overflow-wrap: break-word;             /* túlnyúlás esetén a szavak törése */
+    }
+
+header{                         
+    display: flex;                  /* flexbox-al beállítom a pozíciókat pl oszlop elrendezés, középen-középen  */
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: green;
+    font-size: 150%;
+    font-style: italic;
+    font-family:Arial, Helvetica, sans-serif;
+    color: chartreuse;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    }
+
+nav{display: flex;                       /*  Navigációs feliratok pozícionálása pl: sor, egyenlő táv, középre a "dobozon" belül*/
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;}
+
+nav a{ 
+    border: 5px solid red;            /*  navigációs sáv formázása*/
+    background-color:greenyellow;
+    color: blue;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold ;
+    padding: 5px;
+    font-size: 150%;    
+    }
+
+div{
+    display: flex;                  /*  egy divbe tettem bele az aside és a main blokkot annak érdekében, hogy flex-box-al tudjam pozícionálni*/
+    flex-direction: row;            /*  itt a nagy felbontáson sorokként definiáltam a két nagy blokkoot (aside/main  melyeket a következőkbe, hogy egymás mellett elférjenek %-ban meghatároztam a szélességüket (20%/80%*/
+    text-align: justify;
+    margin-top: 20px;
+    }
+
+aside{
+    width: 20%;                     /*  az asid formázása (pl szélesség 20% azért, hogy a main is elférjen majd*/
+    padding: 10px;
+    border: 3px solid greenyellow;
+    border-radius: 20px;
+    margin-right: 5px;
+    background-color: rgb(248, 246, 246);
+    }
+
+main{                               /*  main formázása 80% széklssség mert az előbbi 20% már az aside -é*/
+    width: 80%;
+    padding: 10px;
+    border: 3px solid greenyellow; 
+    border-radius: 20px;    
+    }
+
+section{
+        border-bottom: 1px dotted;       /*   a sectionokat egy pontozott vonallal különítettem el*/
+        }   
+
+
+footer{
+        display: flex;                   /*   azért hogy a footeren belüli p-t középre igazítsam a footernek a displayet felxre állította, majd a benne lévő egység centert-kapott*/
+        justify-content: center;
+        
+        }  
+
+
+footer + a{display: flex;                    /*  "Ugrás az oldal tetejére" link,   középrerendezve */
+            justify-content: center;
+            width: 100%;
+            padding-bottom: 20px;
+            }
+
+p + div{                                   /*   a main-ben lévő diven belüli elemek (2 kép és egy videó igazítása*/
+         display: flex;
+        align-items:  center;
+        justify-content: center;
+        } 
+
+div > img{                                          /*   main-ben lévő képek formázása (2db ezért 30% a szélesség/db amásik a videó szélessége*/
+        width:30%; height: 100%;
+        border-radius: 30px;
+        }
+
+div > iframe{                                 /*  a main-ben lévő videó fomázása width 30% hogy a két kép mellet még elférje */
+            width:30%;
+            border-radius: 30px;}
+
+h2{ margin: 0px;                        /*   header-ben lévő alcím formázása*/
+    color:darkorange;}
+
+h3{ color:blue;}                    /*   main ben lévő címek fomázása*/
+
+
+
+/*   Ha a képernyő felbontása 768 px alá megy, akkor az alábbiak szerint struktúrálodik át a honlap szerkezet*/
+
+@media screen and (max-width: 768px) {
+  nav{flex-direction: column }                             /*   a nav oszloppá struktúrálódik*/
+  aside, main, img, iframe{ width: 100% !important;}        /*   az aside, main, , képek és videók 100% szélesek lesznek*/
+  nav + div {flex-direction: column-reverse !important}     /*  a nagy divben, ami tartalmazza az aside-ot és a main-t a két nagy szekciót oszlopok lesznek, de úgy hogy sorrendben helyet cserélnek (reverse), ha nincs reverse, akkor a str m*/
+  p +div {flex-direction: column; width: 100% !important;}  /*   main ben lévő  2 kép és egy videó oszlopba struktúrlódik és immár nem 30% hanem 100% széles lesz egy egy kép/videó*/
+  aside{margin-top: 10px;}                                  /*   az aside és a main közötti margin megadása, mivel egymás felett lesznek és előzőleg nem körbe volt megadva a margin, így most kap egy margin topot*/
+  body{background-position: center center;}                 /*   a háttérkép az egész nézet mögött center pozícióban helyezkedik el (nagy méretben mivel az aside kitakarta az egszet ezért csak a main rész mögött volt jól látható. További fejlesztésként még teljes nézetben a main egy részénél is valamilyen módon érdemes lenne s*/
+    
+}
+
+
+
+
